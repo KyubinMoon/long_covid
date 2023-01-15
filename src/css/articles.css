@@ -1,0 +1,17 @@
+.articleList{
+    margin: 5%;
+}
+
+.articleListItem:hover{
+    color: #879b8b;
+}
+
+.articleListItem{
+    font-size: 1.2rem;
+    color: #27522f;
+    margin-bottom: 2rem;
+}
+
+.articleHr{
+    border: 0.3px solid #d3d3d3;
+}

@@ -1,0 +1,19 @@
+.boardList{
+    margin: 5%;
+}
+
+.postTitle{
+    margin: 0.5rem 0;
+
+}
+
+.postUsername{
+    margin: 0.3rem 0;
+}
+
+.postBody{
+    margin: 0.1rem 0;
+}
+.articleHr{
+    border: 0.3px solid #d3d3d3;
+}

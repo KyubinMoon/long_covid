@@ -5,8 +5,30 @@ img {
 
 .loginForm{
     text-align: center;
+    /* border: solid; */
+    width: 70%;
+    height: 20rem;
+    margin: auto;
+}
+
+.loginForm span{
+    font-size: 0.8rem;
+}
+
+.socialLogo{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 10px;
 }
 
 .loginBtn{
-    height: 40px;
+    height: 3rem;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    border-radius: 10px;
+    border: none;
+    
 }

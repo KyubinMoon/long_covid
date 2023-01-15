@@ -1,0 +1,60 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #033f0f;
+    height: 3rem;
+
+}
+
+.navBar a{
+    color: #ffffff;
+}
+
+.navBar a:hover{
+    background-color: #ffffff;
+    color: #033f0f;
+}
+
+.navBar ul{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 80%;
+    justify-content:space-evenly;
+}
+
+.navBar span{
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.dropdown{
+    display: flex;
+    justify-content: space-around;
+    background-color: #879b8b;
+}
+
+.dropdown a{
+    color: #ffffff;
+}
+
+.dropdown a:hover{
+    background-color: #ffffff;
+    color: #033f0f;
+}
+
+.hamburgerMenu{
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .navBar ul{
+        display: none;
+    }
+    .hamburgerMenu{
+        display: inline;
+
+    }
+}

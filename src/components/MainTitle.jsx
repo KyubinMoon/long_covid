@@ -1,8 +1,11 @@
 import React from 'react'
+import "../css/mainTitle.css"
 
 const MainTitle = () => {
   return (
-    <div>Long COVID Teen</div>
+    <div className='mainTitle'>
+      <h1>Long COVID Teen</h1>
+      </div>
   )
 }
 
