@@ -16,9 +16,9 @@ import NavBar from './components/NavBar';
 
 function App() {
   const [auth, setAuth] = useState({
-    isLogged: true,
+    isLogged: false,
     isJoined: false,
-    username: undefined
+    username: 'Kyubin'
   })
 
   const [ posts, setPosts] = useState([])
@@ -77,9 +77,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Home username={username}/>} />
           <Route path='/about' element={<About/>} />          
-          <Route path='/boardlist' element={<BoardList posts={posts}/>} />
-          <Route path='/boardwrite' element={<BoardWrite/>} />
-          <Route path='/boardview' element={<BoardView/>} />
+          <Route path='/boardlist' element={<BoardList isLogged={isLogged} posts={posts}/>} />
+          <Route path='/boardwrite' element={<BoardWrite username={username}/>} />
+          <Route path='/boardview/:postID' element={<BoardView/>} />
           <Route path='/clinics' element={<Clinics/>} />
           <Route path='/survey' element={<Survey isJoined={isJoined}/>} />
           <Route path='/articles' element={<Articles/>} />

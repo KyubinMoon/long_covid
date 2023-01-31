@@ -1,15 +1,24 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import '../css/boardList.css'
 
-const BoardList = ({ posts }) => {
+
+const BoardList = ({isLogged, posts }) => {
+  const navigate = useNavigate()
+  const handleWrite = () => {
+    if (isLogged){
+      navigate('/boardWrite')
+    }else{
+      navigate('/login')
+    }
+  }
   return (
     <div className='boardList'>
-      <button>
-        <Link to='/boardwrite'>
+      <div className='postBtnContainer'>
+      <button className='postBtn' onClick={handleWrite}>
           Write Post
-        </Link>
       </button>
+      </div>
       {
         posts.length === 0
           ?
@@ -19,7 +28,7 @@ const BoardList = ({ posts }) => {
             return (
               <div key={post.id}>
                 <div>
-                  <Link to='/boardView'><h2 className='postTitle'>{post.title}</h2></Link>
+                  <Link to={`/boardView/${post.id}`}><h2 className='postTitle'>{post.title}</h2></Link>
                   <p className='postUsername'>{post.username}</p>
                   <p className='postBody'>{post.body}</p>
                   <br/>
