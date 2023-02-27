@@ -52,8 +52,8 @@ const Articles = () => {
 
        
         <a className='articleListItem' href={"https://www.frontiersin.org/articles/10.3389/fpsyt.2022.917552/full"}>
-          <b>[의사신문] '우후죽순'으로 생긴 코로나 후유증 클리닉들···“환자 없어 고민" </b><br/><br/>
-          </a>
+          <b>[의사신문] '우후죽순'으로 생긴 코로나 후유증 클리닉들···“환자 없어 고민" </b></a><br/>
+          <br/>
           <p>
           The article “우후죽순'으로 생긴 코로나 후유증 클리닉들···“환자 없어 고민” in Korean news agency 의사신문 discusses a current 
           problem the long COVID clinics are facing because of not many patients are visiting the clinic. The author also 

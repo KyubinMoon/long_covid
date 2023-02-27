@@ -17,31 +17,31 @@ const NavBar = ({ isLogged, handleLogout}) => {
     <>
     <section className='navBar'>
         <span>
-            <Link to='/'>Home</Link>
+            <Link to='/'>Home 홈</Link>
         </span>
         <ul>
             <li>
-                <Link to='/about'>About</Link>
+                <Link to='/about'>About 소개</Link>
             </li>
             <li>
-                <Link to='/boardlist'>Board</Link>
+                <Link to='/boardlist'>Board 소통</Link>
             </li>
             <li>
-                <Link to='/clinics'>Clinics</Link>
+                <Link to='/clinics'>Clinics 클리닉</Link>
             </li>
             <li>
-                <Link to='/survey'>Survey</Link>
+                <Link to='/survey'>Survey 설문</Link>
             </li>
             <li>
-                <Link to='/articles'>Articles</Link>
+                <Link to='/articles'>Articles 관련 글</Link>
             </li>
             {
                 isLogged?
                 <li onClick={executeLogout}>
-                    <Link to='/api/logout'>Logout</Link>
+                    <Link to='/api/logout'>Logout 로그아웃</Link>
                 </li>:
                 <li>
-                    <Link to='/login'>Login</Link>
+                    <Link to='/login'>Login 로그인</Link>
                 </li>
             }
         </ul>

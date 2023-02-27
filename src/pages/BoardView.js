@@ -42,14 +42,14 @@ const BoardView = () => {
             <p className='subTitle'>
                 {title}
             </p><br/>
-            <p>Username :  {username}</p><br/><br/>
+            <p>Username 아이디:  {username}</p><br/><br/>
             <p>
                 {body}
             </p>
             <br/><br/>
-            <button type="submit"><Link to='/boardlist'>Cancel</Link></button>
-            <button type="submit">Modify</button>
-            <button type="submit">Delete</button>
+            <button type="submit"><Link to='/boardlist'>Cancel 취소</Link></button>
+            <button type="submit">Modify 수정</button>
+            <button type="submit">Delete 글 삭제</button>
         </form>
     </div>
   )

@@ -4,9 +4,8 @@ import '../css/about.css'
 const About = () => {
   return (
     <div className='about'>
-      
+{/*       
     <div className='subTitle'> Purpose of This Website </div>
-    {/* <img src={이미지이름.jpeg} /> */}
 
     <p> Would creating a community for post-COVID teenagers allow them to feel supported and included, and give the
         potential for future
@@ -24,7 +23,7 @@ const About = () => {
         communicate to make them feel supported and included, and collect the data in easier way for researchers, I
         decided to create this website.
     </p>
-    
+     */}
       <div className='subTitle'>What is Long COVID</div>
       {/* <img src={이미지이름.jpeg} /> */}
     <p>

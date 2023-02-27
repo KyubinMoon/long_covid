@@ -20,20 +20,20 @@ const BoardWrite = ({username}) => {
   
   return (
     <div className='writeForm'>
-      <div className='subTitle'>Write Post</div>
+      <div className='subTitle'>Write Post 글쓰기</div>
         <form>
             <p>
-                Title
+                Title 제목
             </p>
             <input type="text" name="title" value={title} onChange={handleChange}/><br/><br/>
-            <p>User ID: {username}</p> <br/>
+            <p>User ID 아이디: {username}</p> <br/>
             <p>
-                Body
+                Body 본문
             </p>
             <textarea rows="20" cols="100" name="body" value={body} onChange={handleChange}></textarea> 
             <br/><br/>
-            <button type="submit"><Link to='/boardlist'>Cancel</Link></button>
-            <button type="submit" onClick={handleWrite}>Submit</button>
+            <button type="submit"><Link to='/boardlist'>Cancel 취소</Link></button>
+            <button type="submit" onClick={handleWrite}>Submit 확인</button>
         </form>
     </div>
   )

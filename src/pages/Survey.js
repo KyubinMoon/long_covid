@@ -297,32 +297,32 @@ const Survey = ({ isJoined }) => {
       <>
 
         <div className='subTitle'>
-          Please submit this survey.
+          Please submit this survey. 설문을 채워주세요.
         </div>
         <form className='surveyForm'>
           <span><b>
-            1. Gender
+            1. Gender 성별
           </b>
           </span>
           <br />
           <div onChange={handleChange}>
             <input type="radio" name="gender" value="male" />
-            <label> Male</label><br />
+            <label> Male 남성</label><br />
             <input type="radio" name="gender" value="female" />
-            <label> Female</label>
+            <label> Female 여성</label>
           </div>
 
           <br /><br />
 
           <span><b>
-            2. International Age
+            2. International Age 만 나이
           </b>
           </span>
           <br />
           &nbsp;
           &nbsp;
           <select name='age' onChange={handleChange}>
-            <option value="">--age--</option>
+            <option value="">--age 나이--</option>
             <option value="13">13</option>
             <option value="14">14</option>
             <option value="15">15</option>
@@ -334,42 +334,40 @@ const Survey = ({ isJoined }) => {
           <br /><br />
 
           <span><b>
-            3. Vaccination Status
+            3. Vaccination Status 백신 접종
           </b>
           </span>
           <br />
           <div onChange={handleChange}>
-            <input type="radio" name="vaccination" value="0" /> <label> None</label><br />
-            <input type="radio" name="vaccination" value="1" /> <label> 1st dose</label><br />
-            <input type="radio" name="vaccination" value="2" /> <label> 2nd dose</label><br />
-            <input type="radio" name="vaccination" value="3" /> <label> 3rd dose</label><br />
-            <input type="radio" name="vaccination" value="4" /> <label> 4th dose</label>
+            <input type="radio" name="vaccination" value="0" /> <label> None 미접종</label><br />
+            <input type="radio" name="vaccination" value="1" /> <label> 1st dose 1차</label><br />
+            <input type="radio" name="vaccination" value="2" /> <label> 2nd dose 2차</label><br />
+            <input type="radio" name="vaccination" value="3" /> <label> 3rd dose 3차</label><br />
+            <input type="radio" name="vaccination" value="4" /> <label> 4th dose 4차</label>
           </div>
           <br /><br />
 
           <span><b>
-            4. COVID test expereince?
+            4. COVID test expereince 코로나 검사 경험여부
           </b>
-          </span>{" "}
-          <input type="checkbox" name='test' onChange={toggleTestResult}></input>{" "}<label> Yes</label> <br />
+          </span>{" "} <br/>
+          <input type="checkbox" name='test' onChange={toggleTestResult}></input>{" "}<label> Yes 경험 있음</label> <br />
           {
             test &&
             <div onChange={toggleWhenPositive}>
-              <input type="radio" name="testResult" value="negative" /> <label> Negative</label><br />
-              <input type="radio" name="testResult" value="positive" /> <label> Positive</label>
             </div>
           }
           {
             testResult === "positive" &&
             <select name='whenPositive' onChange={handleChange}>
-              <option value="">---select when you diagnosed positive---</option>
-              <option value="1">1 week ago</option>
-              <option value="2">2 weeks ago</option>
-              <option value="4">1 month ago</option>
-              <option value="8">2 months ago</option>
-              <option value="12">3 months ago</option>
-              <option value="16">4 months ago</option>
-              <option value="17"> more than 4 months ago</option>
+              <option value="">---select when you diagnosed positive/양성 판정 날짜---</option>
+              <option value="1">1 week ago 1주전</option>
+              <option value="2">2 weeks ago 2주전</option>
+              <option value="4">1 month ago 1달전</option>
+              <option value="8">2 months ago 2달전</option>
+              <option value="12">3 months ago 3달전</option>
+              <option value="16">4 months ago 4달전</option>
+              <option value="17"> more than 4 months ago 4달 이상</option>
             </select>
           }
           <br /><br />
@@ -378,57 +376,59 @@ const Survey = ({ isJoined }) => {
 
 
           <span><b>
-            5. Have you experienced/ Are you experiencing long COVID? **Need to be reworded**
+            5. Long COVID Experience 코로나 후유증 경험여부
           </b>
           </span>
           <br />
-          <input type="checkbox" name="longCOVID" onChange={toggleLongCOVID} /> <label> Yes</label>
+          <input type="checkbox" name="longCOVID" onChange={toggleLongCOVID} /> <label> Yes 경험 있음</label>
           {" "}<br />
           {
             longCOVID &&
             <>
               <select name="whenLongCOVID" onChange={handleChange}>
-                <option value="">---When? (approximately)---</option>
-                <option value="1">currently experiencing</option>
-                <option value="2">2 weeks ago</option>
-                <option value="3">3 weeks ago</option>
-                <option value="4">1 months ago</option>
-                <option value="8">2 months ago</option>
-                <option value="12">3 months ago</option>
-                <option value="16"> more than 4 months ago</option>
+                <option value="">---When 언제(approximately 대략)---</option>
+                <option value="1">currently experiencing 현재 경험 중</option>
+                <option value="2">2 weeks ago 2주 전</option>
+                <option value="3">3 weeks ago 3주 전</option>
+                <option value="4">1 months ago 1달 전</option>
+                <option value="8">2 months ago 2달 전</option>
+                <option value="12">3 months ago 3달 전</option>
+                <option value="16"> more than 4 months ago 4달 전 이상</option>
               </select><br />
               <select name="lastingLongCOVID" onChange={handleChange}>
-                <option value="">---lasting period (approximately)---</option>
-                <option value="2">for 2 weeks</option>
-                <option value="4">for 4 weeks</option>
-                <option value="6">for 6 weeks</option>
-                <option value="8">for 8 weeks</option>
-                <option value="12">for 12 weeks</option>
-                <option value="13">more than 12 weeks</option>
+                <option value="">---lasting period 지속 기간 (approximately 대략)---</option>
+                <option value="2">for 2 weeks 2주</option>
+                <option value="4">for 4 weeks 4주</option>
+                <option value="6">for 6 weeks 6주</option>
+                <option value="8">for 8 weeks 8주</option>
+                <option value="12">for 12 weeks 12주</option>
+                <option value="13">more than 12 weeks 12주 이상</option>
               </select>
               <br /><br />
 
               <hr></hr>
-              <div style={{ fontSize: "1.2rem" }}>Symptoms</div> <br />
+              <div style={{ fontSize: "1.2rem" }}>Symptoms 증상</div> <br />
               <span style={{ color: "red" }}>
-                **Please select ALL the closest symptoms that you are experiencing** <br /><br />
+                **Please select ALL the closest symptoms that you are experiencing** <br />
+                **해당되는 증상들을 모두 선택해주세요**
+                <br /><br/>
               </span>
               <span>
-                <b>I. Neuropsychiatric</b>{"  "}
+                <b>I. Neuropsychiatric 신경 및 정신적</b>{"  "}
 
-                <input type="checkbox" name="neuropsychiatric" onChange={toggleNeuropsychiatricSymptoms} /> <label> Yes</label> <br />
+                <input type="checkbox" name="neuropsychiatric" onChange={toggleNeuropsychiatricSymptoms} /> <label> Yes 경험 있음</label> <br />
                 {
                   neuropsychiatric &&
 
                   <div onChange={handleNeuropsychiatricSymptomsChange}>
-                    <input type="checkbox" name="mood" /><label> mood</label> <br />
-                    <input type="checkbox" name="fatigue" /><label> fatigue</label> <br />
-                    <input type="checkbox" name="sleepDisorder" /><label> sleep disorder</label> <br />
-                    <input type="checkbox" name="headache" /><label> headache</label> <br />
-                    <input type="checkbox" name="cognition" /><label> cognition</label> <br />
-                    <input type="checkbox" name="dizziness" /><label> dizziness</label> <br />
-                    <input type="checkbox" name="neurologicalAbnormalities" /><label> neurological abnormalities</label> <br />
-                    <input type="checkbox" name="balanceProblems" /><label> balance problems</label>
+                    <input type="checkbox" name="mood" /><label> mood 기분변화</label> <br />
+                    <input type="checkbox" name="fatigue" /><label> fatigue 피로</label> <br />
+                    <input type="checkbox" name="sleepDisorder" /><label> sleep disorder 수면장애</label> <br />
+                    <input type="checkbox" name="headache" /><label> headache 두통</label> <br />
+                    <input type="checkbox" name="cognition" /><label> cognition 인식/인지</label> <br />
+                    <input type="checkbox" name="dizziness" /><label> dizziness 어지러움</label> <br />
+                    <input type="checkbox" name="neurologicalAbnormalities" /><label> neurological abnormalities 신경계 질환</label> <br />
+                    <input type="checkbox" name="balanceProblems" /><label> balance problems 균형 기능 장애</label>
                   </div>
                 }
                 <br />
@@ -436,14 +436,14 @@ const Survey = ({ isJoined }) => {
               <br /><br />
 
               <span>
-                <b>II. Gastrointestinal</b>{"  "}
-                <input type="checkbox" name="nastrointestinal" onChange={toggleNastrointestinalSymptoms} /> <label> Yes</label> <br />
+                <b>II. Gastrointestinal 위장 및 소화기관</b>{"  "}
+                <input type="checkbox" name="nastrointestinal" onChange={toggleNastrointestinalSymptoms} /> <label> Yes 경험 있음</label> <br />
                 {nastrointestinal &&
                   <div onChange={handleNastrointestinalSymptomsChange}>
-                    <input type="checkbox" name="abdominalPain" /><label> abdominal pain</label><br />
-                    <input type="checkbox" name="constipation" /><label> constipation</label><br />
-                    <input type="checkbox" name="diarrhea" /><label> diarrhea</label><br />
-                    <input type="checkbox" name="vomitingNausea" /><label> vomiting/nausea</label><br />
+                    <input type="checkbox" name="abdominalPain" /><label> abdominal pain 복통</label><br />
+                    <input type="checkbox" name="constipation" /><label> constipation 변비</label><br />
+                    <input type="checkbox" name="diarrhea" /><label> diarrhea 설사</label><br />
+                    <input type="checkbox" name="vomitingNausea" /><label> vomiting/nausea 구토/메스꺼움</label><br />
                   </div>
                 }
                 <br />
@@ -452,21 +452,21 @@ const Survey = ({ isJoined }) => {
               <br /><br />
 
               <span>
-                <b>III. Cardiorespiratory</b>{"  "}
-                <input type="checkbox" name="cardiorespiratory" onChange={toggleCardiorespiratorySymptoms} /> <label> Yes</label> <br />
+                <b>III. Cardiorespiratory 심장 및 호흡기</b>{"  "}
+                <input type="checkbox" name="cardiorespiratory" onChange={toggleCardiorespiratorySymptoms} /> <label> Yes 경험 있음</label> <br />
                 {cardiorespiratory &&
                   <div onChange={handleCardiorespiratorySymptomsChange}>
-                    <input type="checkbox" name="respiratorySymptoms" /><label> respiratory symptoms</label><br />
-                    <input type="checkbox" name="sputumNasalCogestion" /><label> sputum/nasal cogestion</label><br />
-                    <input type="checkbox" name="orthostaticIntolerance" /><label> orthostatic intolerance</label><br />
-                    <input type="checkbox" name="exerciseIntolerance" /><label> exercise intolerance</label><br />
-                    <input type="checkbox" name="chestPain" /><label> chest pain</label><br />
-                    <input type="checkbox" name="rhinorrhea" /><label> rhinorrhea</label><br />
-                    <input type="checkbox" name="cough" /><label> cough</label><br />
-                    <input type="checkbox" name="soreThroat" /><label> sore throat</label><br />
-                    <input type="checkbox" name="chestTightness" /><label> chest tightness</label><br />
-                    <input type="checkbox" name="variationInHeartRate" /><label> variation in heart rate</label><br />
-                    <input type="checkbox" name="palpitations" /><label> palpitations</label><br />
+                    <input type="checkbox" name="respiratorySymptoms" /><label> respiratory symptoms 호흡질환</label><br />
+                    <input type="checkbox" name="sputumNasalCogestion" /><label> sputum/nasal cogestion 가래/코막힘</label><br />
+                    <input type="checkbox" name="orthostaticIntolerance" /><label> orthostatic intolerance 기립성 불내증</label><br />
+                    <input type="checkbox" name="exerciseIntolerance" /><label> exercise intolerance 운동불내성</label><br />
+                    <input type="checkbox" name="chestPain" /><label> chest pain 가슴 통증</label><br />
+                    <input type="checkbox" name="rhinorrhea" /><label> rhinorrhea 콧물</label><br />
+                    <input type="checkbox" name="cough" /><label> cough 기침</label><br />
+                    <input type="checkbox" name="soreThroat" /><label> sore throat 목아픔</label><br />
+                    <input type="checkbox" name="chestTightness" /><label> chest tightness 가슴 답답함</label><br />
+                    <input type="checkbox" name="variationInHeartRate" /><label> variation in heart rate 심박동수 변이</label><br />
+                    <input type="checkbox" name="palpitations" /><label> palpitations 심계 항진 (두근거림)</label><br />
                   </div>
                 }
                 <br />
@@ -474,13 +474,13 @@ const Survey = ({ isJoined }) => {
               <br /><br />
 
               <span>
-                <b>IV. Dermatologic/Teguments</b>{"  "}
-                <input type="checkbox" name="dermatologicTeguments" onChange={toggleDermatologicTegumentsSymptoms} /> <label> Yes</label> <br />
+                <b>IV. Dermatologic/Teguments 피부/외피</b>{"  "}
+                <input type="checkbox" name="dermatologicTeguments" onChange={toggleDermatologicTegumentsSymptoms} /> <label> Yes 경험 있음</label> <br />
                 {dermatologicTeguments &&
                   <div onChange={handleDermatologicTegumentsSymptomsChange}>
-                    <input type="checkbox" name="hyperhidrosis" /><label> hyperhidrosis</label><br />
-                    <input type="checkbox" name="dermatologic" /><label> dermatologic</label><br />
-                    <input type="checkbox" name="hairLoss" /><label> hair loss</label><br />
+                    <input type="checkbox" name="hyperhidrosis" /><label> hyperhidrosis 다한증</label><br />
+                    <input type="checkbox" name="dermatologic" /><label> dermatologic 피부 질환</label><br />
+                    <input type="checkbox" name="hairLoss" /><label> hair loss 머리 빠짐</label><br />
                   </div>
                 }
                 <br />
@@ -488,25 +488,25 @@ const Survey = ({ isJoined }) => {
               <br /><br />
 
               <span>
-                <b>V. Others</b>{"  "}
-                <input type="checkbox" name="other" onChange={toggleOtherSymptoms} /> <label> Yes</label> <br />
+                <b>V. Others 기타 증상</b>{"  "}
+                <input type="checkbox" name="other" onChange={toggleOtherSymptoms} /> <label> Yes 경험 있음</label> <br />
                 {other &&
                   <div onChange={handleOtherSymptomsChange}>
-                    <input type="checkbox" name="lossOfAppetite" /><label> loss of appetite</label><br />
-                    <input type="checkbox" name="alteredSmell" /><label> altered smell</label><br />
-                    <input type="checkbox" name="bodyWeightChanges" /><label> body weight changes</label><br />
-                    <input type="checkbox" name="myalgiaArthralgia" /><label> myalgia/arthralgia</label><br />
-                    <input type="checkbox" name="alteredTaste" /><label> altered taste</label><br />
-                    <input type="checkbox" name="otalgia" /><label> otalgia</label><br />
-                    <input type="checkbox" name="ophtalmologic" /><label> ophtalmologic</label><br />
-                    <input type="checkbox" name="swollenLymphNodes" /><label> swollen lymph nodes</label><br />
-                    <input type="checkbox" name="dysphonia" /><label> dysphonia</label><br />
-                    <input type="checkbox" name="fever" /><label> fever</label><br />
-                    <input type="checkbox" name="musculoskeletalOther" /><label> musculoskeletal other</label><br />
-                    <input type="checkbox" name="changesInMenstruation" /><label> changes in menstruation</label><br />
-                    <input type="checkbox" name="urinarySymptoms" /><label> urinary symptoms</label><br />
-                    <input type="checkbox" name="dysphagia" /><label> dysphagia</label><br />
-                    <input type="checkbox" name="speechDisturbances" /><label> speech disturbances</label><br />
+                    <input type="checkbox" name="lossOfAppetite" /><label> loss of appetite 식욕부진</label><br />
+                    <input type="checkbox" name="alteredSmell" /><label> altered smell 후각 변화</label><br />
+                    <input type="checkbox" name="bodyWeightChanges" /><label> body weight changes 체중 변화</label><br />
+                    <input type="checkbox" name="myalgiaArthralgia" /><label> myalgia/arthralgia 근육통/관절통</label><br />
+                    <input type="checkbox" name="alteredTaste" /><label> altered taste 미각 변화</label><br />
+                    <input type="checkbox" name="otalgia" /><label> otalgia 귀 통증</label><br />
+                    <input type="checkbox" name="ophtalmologic" /><label> ophtalmologic 눈 질병</label><br />
+                    <input type="checkbox" name="swollenLymphNodes" /><label> swollen lymph nodes 부은 림프절</label><br />
+                    <input type="checkbox" name="dysphonia" /><label> dysphonia 발성 장애</label><br />
+                    <input type="checkbox" name="fever" /><label> fever 열</label><br />
+                    <input type="checkbox" name="musculoskeletalOther" /><label> musculoskeletal other 근골격과 관련된 다른 질환</label><br />
+                    <input type="checkbox" name="changesInMenstruation" /><label> changes in menstruation 생리불순</label><br />
+                    <input type="checkbox" name="urinarySymptoms" /><label> urinary symptoms 비뇨기 질환</label><br />
+                    <input type="checkbox" name="dysphagia" /><label> dysphagia 삼킴곤란(삼키는데 어려움을 겪는 증상)</label><br />
+                    <input type="checkbox" name="speechDisturbances" /><label> speech disturbances 말소리 장애</label><br />
                   </div>
                 }
                 <br />
@@ -515,7 +515,7 @@ const Survey = ({ isJoined }) => {
             </>
           }
           <br /><br />
-          <button onClick={handleSubmit} type='submit'>Submit</button>
+          <button onClick={handleSubmit} type='submit'>Submit 제출</button>
 
         </form>
       </>

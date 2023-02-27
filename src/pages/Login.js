@@ -18,7 +18,7 @@ const Login = ({ isLogged, handleLogin }) => {
     }
     return (
     isLogged?
-    <div className='subTitle'>You have logged in.</div>:
+    <div className='subTitle'>You have logged in. 로그인되어 있습니다.</div>:
 
     <>
     <div className='subTitle'>Log In</div>
@@ -26,13 +26,13 @@ const Login = ({ isLogged, handleLogin }) => {
             <div>
                 <button className='loginBtn' type="submit" onClick={kakaoLogin}>
                     <img className='socialLogo' src={kakaoLogo} alt="Kakao Logo"/> <br/><br/>
-                        <span>Kakao</span>
+                        <span>Kakao 카카오 로그인</span>
                 </button>
             </div>
             <div>
                 <button className='loginBtn' type="submit" onClick={googleLogin}>
                     <img className='socialLogo' src={googleLogo} alt="Google Logo"/> <br/><br/>
-                        <span>Google</span>
+                        <span>Google 구글 로그인</span>
                 </button>
             </div>
         </div>

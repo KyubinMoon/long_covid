@@ -16,13 +16,13 @@ const BoardList = ({isLogged, posts }) => {
     <div className='boardList'>
       <div className='postBtnContainer'>
       <button className='postBtn' onClick={handleWrite}>
-          Write Post
+          Write Post 글쓰기
       </button>
       </div>
       {
         posts.length === 0
           ?
-          <div className='subTitle'>There's no post.</div>
+          <div className='subTitle'>There's no post. 포스트가 없습니다.</div>
           :
           posts.map(post => {
             return (
