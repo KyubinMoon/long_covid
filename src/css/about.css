@@ -1,3 +1,37 @@
 .about{
     margin: 5%;
 }
+.imageSize{
+    width: 70%;
+    height:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+.source{
+    font-size: 0.8rem;
+    color: #000000e3;
+    margin-bottom: 2rem;
+    text-align: center;
+    
+}
+
+
+.videos{
+    width: 100%;
+    height:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+.article{
+    color: #27522f;
+}
+
+.article:hover{
+    color: #879b8b;
+}

@@ -1,15 +1,18 @@
 
 import React from 'react'
+import FDACovid from "../asset/FDACovid.png"
 
 const Home = ({username}) => {
   return (
     <>
-    <div className='subTitle'>
+    <div className='subTitle'><br/>
       <b>Welcome, {username}!</b>
     </div>
     <br/>
     <div className='subTitle'> Purpose of This Website</div>
-<br/>
+    <img className='imageSize' src={FDACovid} alt="FDA COVID"/>
+      <div className='source'>“COVID-19 Test Basics.” U.S. Food and Drug Administration, FDA, 1 Apr. 2023,
+       https://www.fda.gov/consumers/consumer-updates/kobideu-19-covid-19-geomsa-gibon-sahang. </div> 
     <div className='question'> <b>Would creating a community for post-COVID teenagers allow them to feel supported and included, and give the
         potential for future
         long-COVID research? </b>
@@ -27,6 +30,13 @@ const Home = ({username}) => {
         communicate to make them feel supported and included, and collect the data in easier way for researchers, I
         decided to create this website.
     </p>
+    <br/><br/><br/>
+
+    <div className='subTitle'> Data Visualizations Created by Using the Survey Sample of the Website</div>
+
+
+
+
     </>
   )
 }
